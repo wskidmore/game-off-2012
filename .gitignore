@@ -43,3 +43,6 @@ obj*/
 [Tt]emp*/
 Assembly-*
 
+#Mono
+*.sln
+*.userprefs

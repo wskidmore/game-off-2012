@@ -3,26 +3,23 @@ using System.Collections;
 
 public class CometMove : MonoBehaviour
 {
-    private float _xVelocity = 5;
-
+	public float xVelocity = 20;
+	public float yVelocity = 0;
 
     // Use this for initialization
     void Start()
     {
+		rigidbody.AddRelativeForce(xVelocity, yVelocity, 0);
     }
 
     void FixedUpdate()
     {
-        rigidbody.AddRelativeForce(_xVelocity, 0, 0);
+	    rigidbody.velocity = new Vector3(xVelocity, yVelocity, 0);
     }
 
-    public void SetRotation(float degrees)
-    {
-		transform.Rotate(new Vector3(0, 0, degrees));
-    }
-	public void SetVelocity(Vector3 velocity) 
+	public void SetVelocity(float x, float y)
 	{
-		rigidbody.velocity = velocity;
+		xVelocity = x;
+		yVelocity = y;
 	}
-
 }
