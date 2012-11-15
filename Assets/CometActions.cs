@@ -19,7 +19,8 @@ public class CometActions : MonoBehaviour
 	
 	void OnBecameInvisible () 
 	{
-		Player.GetComponent<PlayerState>().RemoveComet(gameObject);
+		if (gameObject && Player)
+			Player.GetComponent<PlayerState>().RemoveComet(gameObject);
 	}	
 	
 	public void DeSelectComet()
