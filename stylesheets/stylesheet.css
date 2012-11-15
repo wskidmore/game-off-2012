@@ -77,8 +77,8 @@ h1.title {
 }
 
 .wrapper {
-  width: 500px;
-  margin: 0 0 0 12px;
+  width: 945px;
+  margin: 0 auto;
 }
 
 #container {
@@ -596,9 +596,7 @@ footer .owner p a {
     }
     #unityPlayer {
     cursor: default;
-    position: absolute;
-    top: 114px;
-    left: 524px;
+    margin: 6px auto;
     height: 600px;
     width: 960px;
     }
